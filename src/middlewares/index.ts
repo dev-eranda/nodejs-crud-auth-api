@@ -19,7 +19,7 @@ export const isAuthenticated = async (req: express.Request, res: express.Respons
 
       merge(req, { identity: existingUser });
 
-      return next();
+      next();
    } catch (error) {
       console.log(error);
       res.sendStatus(500);
