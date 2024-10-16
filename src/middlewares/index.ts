@@ -1,5 +1,5 @@
 import express from "express";
-import { merge } from "lodash";
+import { get, merge } from "lodash";
 import { getUserBySessionToken } from "../db/users";
 
 export const isAuthenticated = async (req: express.Request, res: express.Response, next: express.NextFunction) => {
@@ -18,6 +18,28 @@ export const isAuthenticated = async (req: express.Request, res: express.Respons
       }
 
       merge(req, { identity: existingUser });
+
+      next();
+   } catch (error) {
+      console.log(error);
+      res.sendStatus(500);
+   }
+};
+
+export const isOwner = async (req: express.Request, res: express.Response, next: express.NextFunction) => {
+   try {
+      const { id } = req.params;
+      const currentUserId = get(req, "identity._id") as string;
+
+      if (!currentUserId) {
+         res.sendStatus(403);
+         return;
+      }
+
+      if (currentUserId.toString() !== id) {
+         res.sendStatus(403);
+         return;
+      }
 
       next();
    } catch (error) {
