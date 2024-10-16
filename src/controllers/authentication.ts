@@ -28,6 +28,9 @@ export const register = async (req: express.Request, res: express.Response): Pro
          },
       });
 
+      user.authentication.password = undefined;
+      user.authentication.salt = undefined;
+
       res.status(201).json(user);
    } catch (error) {
       console.log(error);
@@ -63,6 +66,9 @@ export const login = async (req: express.Request, res: express.Response): Promis
       await user.save();
 
       res.cookie("auth-cookie", user.authentication.sessionToken, { domain: "localhost", path: "/" });
+
+      user.authentication.password = undefined;
+      user.authentication.salt = undefined;
 
       res.status(200).json(user);
    } catch (error) {
