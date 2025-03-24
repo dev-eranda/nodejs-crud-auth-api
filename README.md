@@ -1,5 +1,5 @@
 # Node.js RESTful API  
-**Developed By:** Eranda Samarasinghe  
+**Developed by:** Eranda Samarasinghe  
 <hr />
 
 ## Project Background and Overview  
@@ -18,7 +18,7 @@ The primary objectives of this application include:
 ## Technical Details  
 Core technologies used:  
 
-- **Node.js, Express.js, TypeScript, JWT Authentication, MongoDB**  
+- **Node.js, Express, TypeScript, JWT Authentication, MongoDB**  
 <hr />
 
 ## Installation  
