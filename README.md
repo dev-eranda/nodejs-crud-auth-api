@@ -3,24 +3,22 @@
 <hr />
 
 ## Project Background and Overview  
-This project focuses on developing a RESTful API using Node.js, TypeScript, and Express.js. It was designed to follow best practices for API development, 
-ensuring organized route management, comprehensive error handling, and secure authentication. With the integration of JWT authentication, the API ensures secure user access, 
-and MongoDB is used for efficient data storage. This project allowed me to deepen my understanding of building secure, well-structured APIs and handling database connections effectively.  
+This repository contains a RESTful API built with Node.js, TypeScript, and Express.js, featuring JWT authentication and MongoDB for data storage. It follows best practices for route management, error handling, and secure user access.
 <hr />
 
 ## Project Goals  
 The primary objectives of this application include:  
 
-1. Implement JWT-based authentication to secure API endpoints and manage user access.
-2. Follow best practices in API development, including organized route management and comprehensive error handling.
-3. Use MongoDB as the data storage solution for the application.
-4. Build a modular codebase for scalable and maintainable development.
+1. Implemented JWT-based authentication to secure API endpoints and manage user access
+2. Followed best practices in API development, route management and comprehensive error handling
+3. Used MongoDB as the data storage solution for the application
+4. Built a modular codebase for scalable and maintainable development
 <hr />
 
 ## Technical Details  
 Core technologies used:  
 
-- **Node.js, TypeScript, Express.js, JWT Authentication, MongoDB**  
+- **Node.js, Express.js, TypeScript, JWT Authentication, MongoDB**  
 <hr />
 
 ## Installation  
